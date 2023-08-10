@@ -425,4 +425,5 @@ dtb-y += $(sdmsteppeauto-dtb-y)
 
 always-y        := $(dtb-y)
 subdir-y        := $(dts-dirs)
+subdir-y        += audio biometrics-fingerprint bt camera data display dsp eSE eva graphics mm mmrm mm-sys nfc synx video wlan
 clean-files     := *.dtb *.dtbo
