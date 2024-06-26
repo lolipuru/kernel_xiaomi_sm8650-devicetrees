@@ -20,7 +20,13 @@ dtbo-y += kalama-audio.dtbo \
 endif
 
 ifeq ($(CONFIG_ARCH_PINEAPPLE), y)
-dtbo-y += pineapple-audio.dtbo \
+dtbo-y += pineapple-audio.dtbo
+endif
+
+ifeq ($(CONFIG_TARGET_PRODUCT_HOUJI),y)
+dtbo-y += houji-audio-mtp.dtbo
+else
+dtbo-y += \
                  pineapple-audio-cdp.dtbo \
                  pineapple-audio-wsa883x-cdp.dtbo \
                  pineapple-audio-cdp-nfc.dtbo \
@@ -32,8 +38,7 @@ dtbo-y += pineapple-audio.dtbo \
                  pineapple-audio-rcm.dtbo \
                  pineapple-audio-qrd-sku2.dtbo \
                  pineapplep-audio-hdk.dtbo \
-                 pineapplep-audio-aim500.dtbo \
-                 houji-audio-mtp.dtbo
+                 pineapplep-audio-aim50s0.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_CLIFFS), y)
