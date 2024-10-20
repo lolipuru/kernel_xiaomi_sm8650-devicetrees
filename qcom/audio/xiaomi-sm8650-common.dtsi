@@ -1,0 +1,107 @@
+#include "pineapple-audio-overlay.dtsi"
+
+&pri_mi2s_pinctrl {
+	status = "disabled";
+};
+
+&fm_i2s1_pinctrl {
+	status = "disabled";
+};
+
+&sec_tdm_pinctrl {
+	status = "disabled";
+};
+
+&tert_mi2s_pinctrl {
+	status = "disabled";
+};
+
+&quat_mi2s_pinctrl {
+	status = "disabled";
+};
+
+&quin_mi2s_pinctrl {
+	status = "disabled";
+};
+
+&sen_mi2s_pinctrl {
+	status = "disabled";
+};
+
+&sep_mi2s_pinctrl {
+	status = "disabled";
+};
+
+&quin_pcm_pinctrl {
+	status = "disabled";
+};
+
+&wsa_swr_clk_data_pinctrl {
+	status = "disabled";
+};
+
+&wsa2_swr_clk_data_pinctrl {
+	status = "disabled";
+};
+
+&cdc_dmic01_pinctrl {
+	status = "disabled";
+};
+
+&cdc_dmic23_pinctrl {
+	status = "disabled";
+};
+
+&cdc_dmic45_pinctrl {
+	status = "disabled";
+};
+
+&cdc_dmic67_pinctrl {
+	status = "disabled";
+};
+
+&pineapple_snd {
+	qcom,sec-mi2s-gpios = <&cdc_sec_tdm_gpios>;
+	qcom,wcd-disable-legacy-surge;
+	qcom,msm-mbhc-gnd-swh = <0>;
+	qcom,msm-mbhc-hphl-swh = <0>;
+	qcom,msm-mbhc-usbc-audio-supported = <1>;
+	qcom,tdm-audio-intf = <1>;
+	qcom,tdm-clk-attribute = <4 4 4 4 4 4 4 4>;
+	qcom,tdm-max-slots = <4>;
+	qcom,uart-audio-sw-gpio = <&sbu_uart_en>;
+	qcom,wsa-max-devs = <0>;
+};
+
+&spf_core_platform {
+	cdc_sec_tdm_gpios: sec_tdm_pinctrl {
+			status = "ok";
+			compatible = "qcom,msm-cdc-pinctrl";
+			pinctrl-0 = <&tdm1_clk_active &tdm1_ws_active &tdm1_din_active &tdm1_dout_active>;
+			pinctrl-1 = <&tdm1_clk_sleep &tdm1_ws_sleep &tdm1_din_sleep &tdm1_dout_sleep>;
+			pinctrl-names = "aud_active", "aud_sleep";
+			#gpio-cells = <0>;
+	};
+};
+
+&soc {
+	sbu_uart_en: msm_cdc_pinctrl@53 {
+		compatible = "qcom,msm-cdc-pinctrl";
+		pinctrl-0 = <&sbu_uart_en_active>;
+		pinctrl-1 = <&sbu_uart_en_idle>;
+		pinctrl-names = "aud_active", "aud_sleep";
+		#gpio-cells = <0>;
+	};
+};
+
+&lpass_cdc {
+	qcom,num-macros = <3>;
+};
+
+&wcd939x_codec {
+	qcom,cdc-micbias1-mv = <2750>;
+	qcom,cdc-micbias2-mv = <2750>;
+	qcom,cdc-micbias3-mv = <2750>;
+	qcom,cdc-micbias4-mv = <2750>;
+	qcom,cdc-vdd-mic-bias-voltage = <3296000 3960000>;
+};

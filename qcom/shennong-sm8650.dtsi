@@ -413,6 +413,56 @@
 	};
 };
 
+&qupv3_se8_i2c {
+	status = "ok";
+	cs35l43_0: cs35l43@40 {
+		cirrus,vpbr-thld = <0x08>;
+		cirrus,vpbr-max-att = <0x03>;
+		cirrus,vpbr-atk-vol = <0x05>;
+		cirrus,vpbr-atk-rate = <0x00>;
+		cirrus,vpbr-wait = <0x00>;
+		cirrus,vpbr-rel-rate = <0x00>;
+		cirrus,vpbr-enable = <0x01>;
+		cirrus,low-pwr-mode-standby = <0x01>;
+		cirrus,i2c-addr = <0x28>;
+		sound-name-prefix = "B";
+		cirrus,gpio2-src-sel = <0x04>;
+		cirrus,asp-sdout-hiz = <0x03>;
+		cirrus,bst-ipk-ma = <0xfa0>;
+		pinctrl-0 = <&cirrus_reset_default_0 &cirrus_irq_default_0>;
+		pinctrl-names = "default";
+		interrupts = <0x62 0x2008>;
+		interrupt-parent = <&tlmm>;
+		reg = <0x40>;
+		reset-gpios = <&tlmm 0x55 0x0>;
+		compatible = "cirrus,cs35l43";
+		status = "ok";
+	};
+	cs35l41_1: cs35l41@42 {
+		cirrus,vpbr-thld = <0x08>;
+		cirrus,vpbr-max-att = <0x03>;
+		cirrus,vpbr-atk-vol = <0x05>;
+		cirrus,vpbr-atk-rate = <0x00>;
+		cirrus,vpbr-wait = <0x00>;
+		cirrus,vpbr-rel-rate = <0x00>;
+		cirrus,vpbr-enable = <0x01>;
+		cirrus,low-pwr-mode-standby = <0x01>;
+		cirrus,i2c-addr = <0x2a>;
+		sound-name-prefix = "T";
+		cirrus,gpio2-src-sel = <0x04>;
+		cirrus,asp-sdout-hiz = <0x03>;
+		cirrus,bst-ipk-ma = <0xfa0>;
+		pinctrl-0 = <&cirrus_reset_default_1 &cirrus_irq_default_1>;
+		pinctrl-names = "default";
+		interrupts = <0x63 0x2008>;
+		interrupt-parent = <&tlmm>;
+		reg = <0x42>;
+		reset-gpios = <&tlmm 0x6f 0x0>;
+		compatible = "cirrus,cs35l43";
+		status = "ok";
+	};
+};
+
 &pm8550b_gpios {
 	charger_therm0 {
 		charger_therm0_default: charger_therm0_default {
