@@ -1,0 +1,13 @@
+/dts-v1/;
+/plugin/;
+
+#include "houji-audio-mtp.dtsi"
+
+ / {
+	model = "Qualcomm Technologies, Inc. Houji based on SM8650";
+	compatible = "qcom,pineapple-mtp", "qcom,pineapple", "qcom,mtp";
+	qcom,msm-id = <557 0x10000>, <557 0x20000>, <577 0x10000>, <577 0x20000>;
+	qcom,board-id = <0x10008 0>;
+    xiaomi,miboard-id = <0x02 0>;
+};
+
