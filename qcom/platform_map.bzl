@@ -220,6 +220,159 @@ _platform_map = {
             {"name": "cliffs-rcm-qhdp-kiwi-overlay.dtbo"},
         ],
     },
+    "shennong": {
+        "dtb_list": [
+            # keep sorted
+            {"name": "pineapple.dtb"},
+            {"name": "pineapple-v2.dtb"},
+            {
+                "name": "pineapplep.dtb",
+                "apq": True,
+            },
+            {
+                "name": "pineapplep-v2.dtb",
+                "apq": True,
+            },
+        ],
+        "dtbo_list": [
+            # keep sorted
+            {"name": "shennong-sm8650-overlay.dtbo"},
+        ],
+    },
+    "aurora": {
+        "dtb_list": [
+            # keep sorted
+            {"name": "pineapple.dtb"},
+            {"name": "pineapple-v2.dtb"},
+            {
+                "name": "pineapplep.dtb",
+                "apq": True,
+            },
+            {
+                "name": "pineapplep-v2.dtb",
+                "apq": True,
+            },
+        ],
+        "dtbo_list": [
+            # keep sorted
+            {"name": "aurora-sm8650-overlay.dtbo"},
+        ],
+    },
+    "manet": {
+        "dtb_list": [
+            # keep sorted
+            {"name": "pineapple.dtb"},
+            {"name": "pineapple-v2.dtb"},
+            {
+                "name": "pineapplep.dtb",
+                "apq": True,
+            },
+            {
+                "name": "pineapplep-v2.dtb",
+                "apq": True,
+            },
+        ],
+        "dtbo_list": [
+            # keep sorted
+            {"name": "manet-sm8650-overlay.dtbo"},
+        ],
+    },
+    "suiren": {
+        "dtb_list": [
+            # keep sorted
+            {"name": "pineapple.dtb"},
+            {"name": "pineapple-v2.dtb"},
+            {
+                "name": "pineapplep.dtb",
+                "apq": True,
+            },
+            {
+                "name": "pineapplep-v2.dtb",
+                "apq": True,
+            },
+        ],
+        "dtbo_list": [
+            # keep sorted
+            {"name": "suiren-sm8650-overlay.dtbo"},
+        ],
+    },
+    "houji": {
+        "dtb_list": [
+            # keep sorted
+            {"name": "pineapple.dtb"},
+            {"name": "pineapple-v2.dtb"},
+            {
+                "name": "pineapplep.dtb",
+                "apq": True,
+            },
+            {
+                "name": "pineapplep-v2.dtb",
+                "apq": True,
+            },
+        ],
+        "dtbo_list": [
+            # keep sorted
+            {"name": "houji-sm8650-overlay.dtbo"},
+        ],
+    },
+    "ruyi": {
+        "dtb_list": [
+            # keep sorted
+            {"name": "pineapple.dtb"},
+            {"name": "pineapple-v2.dtb"},
+            {
+                "name": "pineapplep.dtb",
+                "apq": True,
+            },
+            {
+                "name": "pineapplep-v2.dtb",
+                "apq": True,
+            },
+        ],
+        "dtbo_list": [
+            # keep sorted
+            {"name": "ruyi-sm8650-overlay.dtbo"},
+        ],
+    },
+    "goku": {
+        "dtb_list": [
+            # keep sorted
+            {"name": "pineapple.dtb"},
+            {"name": "pineapple-v2.dtb"},
+            {
+                "name": "pineapplep.dtb",
+                "apq": True,
+            },
+            {
+                "name": "pineapplep-v2.dtb",
+                "apq": True,
+            },
+        ],
+        "dtbo_list": [
+            # keep sorted
+            {"name": "goku-sm8650-overlay.dtbo"},
+        ],
+    },
+    "peridot": {
+        "dtb_list": [
+            {"name": "cliffs.dtb"},
+            {"name": "cliffs7.dtb"},
+        ],
+        "dtbo_list": [
+            # keep sorted
+            {"name": "peridot-sm8635-overlay.dtbo"},
+        ],
+    },
+    "chenfeng": {
+        "dtb_list": [
+            {"name": "cliffs.dtb"},
+            {"name": "cliffs7.dtb"},
+        ],
+        "dtbo_list": [
+            # keep sorted
+            {"name": "chenfeng-sm8635-overlay.dtbo"},
+        ],
+    },
     "pineapple-tuivm": {
         "dtb_list": [
             {"name": "pineapple-oemvm-rcm.dtb"},

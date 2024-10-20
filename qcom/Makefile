@@ -28,7 +28,13 @@ PINEAPPLE_BOARDS += \
 		 pineapplep-hdk-overlay.dtbo \
 		 pineapple-dpm-overlay.dtbo \
 		 pineapplep-aim500-overlay.dtbo \
-		 pineapplep-aim500-v2-overlay.dtbo
+		 pineapplep-aim500-v2-overlay.dtbo \
+		 shennong-sm8650-overlay.dtbo \
+		 manet-sm8650-overlay.dtbo \
+		 aurora-sm8650-overlay.dtbo \
+		 houji-sm8650-overlay.dtbo \
+		 ruyi-sm8650-overlay.dtbo \
+		 goku-sm8650-overlay.dtbo
 
 NOAPQ_PINEAPPLE_BOARDS += \
 		 pineapple-rumi-overlay.dtbo
@@ -37,6 +43,12 @@ pineapple-dtb-$(CONFIG_ARCH_PINEAPPLE) += \
 	$(call add-overlays, $(PINEAPPLE_BOARDS) $(NOAPQ_PINEAPPLE_BOARDS),$(PINEAPPLE_BASE_DTB))\
 	$(call add-overlays, $(PINEAPPLE_BOARDS) $(APQ_PINEAPPLE_BOARDS),$(PINEAPPLE_APQ_BASE_DTB))
 pineapple-overlays-dtb-$(CONFIG_ARCH_PINEAPPLE) += $(PINEAPPLE_BOARDS) $(NOAPQ_PINEAPPLE_BOARDS) $(PINEAPPLE_BASE_DTB) $(PINEAPPLE_APQ_BASE_DTB)
+shennong-overlays-dtb-$(CONFIG_ARCH_PINEAPPLE) += $(PINEAPPLE_BOARDS) $(NOAPQ_PINEAPPLE_BOARDS) $(PINEAPPLE_BASE_DTB) $(PINEAPPLE_APQ_BASE_DTB)
+manet-overlays-dtb-$(CONFIG_ARCH_PINEAPPLE) += $(PINEAPPLE_BOARDS) $(NOAPQ_PINEAPPLE_BOARDS) $(PINEAPPLE_BASE_DTB) $(PINEAPPLE_APQ_BASE_DTB)
+aurora-overlays-dtb-$(CONFIG_ARCH_PINEAPPLE) += $(PINEAPPLE_BOARDS) $(NOAPQ_PINEAPPLE_BOARDS) $(PINEAPPLE_BASE_DTB) $(PINEAPPLE_APQ_BASE_DTB)
+houji-overlays-dtb-$(CONFIG_ARCH_PINEAPPLE) += $(PINEAPPLE_BOARDS) $(NOAPQ_PINEAPPLE_BOARDS) $(PINEAPPLE_BASE_DTB) $(PINEAPPLE_APQ_BASE_DTB)
+ruyi-overlays-dtb-$(CONFIG_ARCH_PINEAPPLE) += $(PINEAPPLE_BOARDS) $(NOAPQ_PINEAPPLE_BOARDS) $(PINEAPPLE_BASE_DTB) $(PINEAPPLE_APQ_BASE_DTB)
+goku-overlays-dtb-$(CONFIG_ARCH_PINEAPPLE) += $(PINEAPPLE_BOARDS) $(NOAPQ_PINEAPPLE_BOARDS) $(PINEAPPLE_BASE_DTB) $(PINEAPPLE_APQ_BASE_DTB)
 
 CLIFFS_BASE_DTB += cliffs.dtb cliffs7.dtb
 CLIFFS_APQ_BASE_DTB += cliffsp.dtb cliffs7p.dtb
@@ -52,7 +64,9 @@ CLIFFS_BOARDS += \
 		 cliffs-mtp-kiwi-2s-nfc-wcd9395-pm8550b-overlay.dtbo \
 		 cliffs-rcm-qhdp-overlay.dtbo \
 		 cliffs-rcm-fhdp-kiwi-overlay.dtbo \
-		 cliffs-rcm-qhdp-kiwi-overlay.dtbo
+		 cliffs-rcm-qhdp-kiwi-overlay.dtbo \
+		 peridot-sm8635-overlay.dtbo \
+		 chenfeng-sm8635-overlay.dtbo
 
 NOAPQ_CLIFFS_BOARDS += \
 		 cliffs-rumi-overlay.dtbo
@@ -61,6 +75,8 @@ pineapple-dtb-$(CONFIG_ARCH_CLIFFS) += \
 	$(call add-overlays, $(CLIFFS_BOARDS) $(NOAPQ_CLIFFS_BOARDS),$(CLIFFS_BASE_DTB))\
 	$(call add-overlays, $(CLIFFS_BOARDS),$(CLIFFS_APQ_BASE_DTB))
 pineapple-overlays-dtb-$(CONFIG_ARCH_CLIFFS) += $(CLIFFS_BOARDS) $(NOAPQ_CLIFFS_BOARDS) $(CLIFFS_BASE_DTB) $(CLIFFS_APQ_BASE_DTB)
+peridot-overlays-dtb-$(CONFIG_ARCH_CLIFFS) += $(CLIFFS_BOARDS) $(NOAPQ_CLIFFS_BOARDS) $(CLIFFS_BASE_DTB) $(CLIFFS_APQ_BASE_DTB)
+chenfeng-overlays-dtb-$(CONFIG_ARCH_CLIFFS) += $(CLIFFS_BOARDS) $(NOAPQ_CLIFFS_BOARDS) $(CLIFFS_BASE_DTB) $(CLIFFS_APQ_BASE_DTB)
 
 VOLCANO_BASE_DTB += volcano.dtb
 
@@ -72,6 +88,14 @@ pineapple-dtb-$(CONFIG_ARCH_VOLCANO) += \
 pineapple-overlays-dtb-$(CONFIG_ARCH_VOLCANO) += $(NOAPQ_VOLCANO_BOARDS) $(VOLCANO_BASE_DTB)
 
 dtb-y += $(pineapple-dtb-y)
+dtb-y += $(shennong-dtb-y)
+dtb-y += $(manet-dtb-y)
+dtb-y += $(aurora-dtb-y)
+dtb-y += $(houji-dtb-y)
+dtb-y += $(ruyi-dtb-y)
+dtb-y += $(goku-dtb-y)
+dtb-y += $(peridot-dtb-y)
+dtb-y += $(chenfeng-dtb-y)
 
 KALAMA_BASE_DTB += kalama.dtb kalama-v2.dtb
 KALAMA_APQ_BASE_DTB += kalamap.dtb kalamap-v2.dtb
