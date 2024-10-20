@@ -1132,10 +1132,10 @@
 			hw-tlow = <22>;
 			hw-tsu-sto = <17>;
 			hw-tsu-sta = <18>;
-			hw-thd-dat = <16>;
+			hw-thd-dat = <12>;
 			hw-thd-sta = <15>;
-			hw-tbuf = <24>;
-			hw-scl-stretch-en = <1>;
+			hw-tbuf = <18>;
+			hw-scl-stretch-en = <0>;
 			hw-trdhld = <3>;
 			hw-tsp = <3>;
 			cci-clk-src = <37500000>;
@@ -1665,7 +1665,6 @@
 		sys-cache-names = "small-1", "large-1";
 		sys-cache-uids = <34 38>;
 		enable-smart-qos;
-		enable-cam-drv = <(CAM_DDR_DRV | CAM_CLK_DRV)>;
 		rt-wr-priority-min = <4>;
 		rt-wr-priority-max = <5>;
 		rt-wr-priority-clamp = <6>;
