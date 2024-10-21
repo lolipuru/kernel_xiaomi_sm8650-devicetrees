@@ -1,5 +1,59 @@
 /*for houji pinctrl */
 &tlmm {
+	cirrus_irq_default {
+		cirrus_irq_default_0: cirrus_irq_default_0 {
+			config {
+				bias-pull-up;
+				drive-strength = <2>; /* 2 MA */
+				input-enable;
+				pins = "gpio98";
+			};
+			mux {
+				function = "gpio";
+				pins = "gpio98";
+			};
+		};
+
+		cirrus_irq_default_1: cirrus_irq_default_1 {
+			config {
+				bias-pull-up;
+				drive-strength = <2>; /* 2 MA */
+				input-enable;
+				pins = "gpio99";
+			};
+			mux {
+				function = "gpio";
+				pins = "gpio99";
+			};
+		};
+	};
+
+	cirrus_reset_default_0: cirrus_reset_default_0 {
+		config {
+			bias-disable;
+			drive-strength = <10>; /* 10 MA */
+			output-high;
+			pins = "gpio85";
+		};
+		mux {
+			function = "gpio";
+			pins = "gpio85";
+		};
+	};
+
+	cirrus_reset_default_1: cirrus_reset_default_1 {
+		config {
+			bias-disable;
+			drive-strength = <10>; /* 10 MA */
+			output-high;
+			pins = "gpio111";
+		};
+		mux {
+			function = "gpio";
+			pins = "gpio111";
+		};
+	};
+
 	nfc {
 		nfc_int_active: nfc_int_active {
 			/* active state */
