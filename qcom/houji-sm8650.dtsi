@@ -368,6 +368,7 @@
 		cirrus,boost-ind-nanohenry = <0x3E8>;
 		cirrus,boost-peak-milliamp = <0xFA0>;
 		cirrus,fast-switch = "B-music.txt", "B-handfree.txt";
+		cirrus,i2c-addr = <0x28>;
 		cirrus,right-channel-amp;
 		cirrus,temp-warn_threshold = <0x3>;
 		compatible = "cirrus,cs35l41";
@@ -390,6 +391,7 @@
 		cirrus,boost-ind-nanohenry = <0x3E8>;
 		cirrus,boost-peak-milliamp = <0xFA0>;
 		cirrus,fast-switch = "T-music.txt", "T-handset.txt", "T-handfree.txt";
+		cirrus,i2c-addr = <0x2a>;
 		cirrus,temp-warn_threshold = <0x3>;
 		compatible = "cirrus,cs35l41";
 		interrupt-parent = <&tlmm>;
@@ -636,6 +638,19 @@
 	regulator-min-microvolt = <3000000>;
 	regulator-max-microvolt = <3000000>;
 	qcom,init-voltage = <3000000>;
+};
+
+&pm8550b_haptics {
+	qcom,rev_t_lra_us = <90>;
+	qcom,lra-f0-cal-count = <570>;
+	qcom,lra-f0-default = <170>;
+	qcom,lra-f0-max = <180>;
+	qcom,lra-f0-min = <160>;
+	qcom,lra-period-us = <5714>;
+	qcom,lra_calibration_vmax_hdrm_mv = <1200>;
+	qcom,f0-vmax-mv = <2100>;
+	qcom,custom_vmax_mv = <8200>;
+	qcom,vmax-mv = <2050>;
 };
 
 &qupv3_se6_spi {
