@@ -1,6 +1,14 @@
+ifeq ($(CONFIG_ARCH_PINEAPPLE), y)
 DTC_INCLUDE += $(srctree)/../sm8650-modules/qcom/opensource/camera-kernel
+else ifeq ($(CONFIG_ARCH_CLIFFS), y)
+DTC_INCLUDE += $(srctree)/../sm8635-modules/qcom/opensource/camera-kernel
+endif
 
+ifeq ($(CONFIG_ARCH_PINEAPPLE), y)
 include $(srctree)/$(src)/config/pineapple.mk
+else ifeq ($(CONFIG_ARCH_CLIFFS), y)
+include $(srctree)/$(src)/config/cliffs.mk
+endif
 
 always-y	:= $(dtbo-y) $(dtb-y)
 subdir-y	:= $(dts-dirs)

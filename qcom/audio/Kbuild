@@ -1,4 +1,8 @@
+ifeq ($(CONFIG_ARCH_PINEAPPLE), y)
 DTC_INCLUDE += $(srctree)/../sm8650-modules/qcom/opensource/audio-kernel/include
+else ifeq ($(CONFIG_ARCH_CLIFFS), y)
+DTC_INCLUDE += $(srctree)/../sm8635-modules/qcom/opensource/audio-kernel/include
+endif
 
 ifeq ($(CONFIG_ARCH_KALAMA), y)
 dtbo-y += kalama-audio.dtbo \
@@ -29,20 +33,23 @@ dtbo-y += pineapple-audio.dtbo \
                  pineapple-audio-qrd-sku2.dtbo \
                  pineapplep-audio-hdk.dtbo \
                  pineapplep-audio-aim500.dtbo \
-                 houji-audio-mtp.dtbo \
-                 cliffs-audio.dtbo \
-                 cliffs-audio-mtp.dtbo \
-                 cliffs7-audio-mtp.dtbo \
-                 cliffs-audio-qrd.dtbo \
-                 cliffs7-audio-qrd.dtbo \
-                 cliffs-audio-cdp.dtbo \
-                 cliffs7-audio-cdp.dtbo \
-                 cliffs-audio-rcm.dtbo \
-                 cliffs7-audio-rcm.dtbo \
-                 cliffs-audio-mtp-wcd9395.dtbo \
-                 cliffs7-audio-mtp-wcd9395.dtbo \
-                 cliffs-audio-atp.dtbo \
-                 cliffs7-audio-atp.dtbo
+                 houji-audio-mtp.dtbo
+endif
+
+ifeq ($(CONFIG_ARCH_CLIFFS), y)
+dtbo-y += cliffs-audio.dtbo \
+                cliffs-audio-mtp.dtbo \
+                cliffs7-audio-mtp.dtbo \
+                cliffs-audio-qrd.dtbo \
+                cliffs7-audio-qrd.dtbo \
+                cliffs-audio-cdp.dtbo \
+                cliffs7-audio-cdp.dtbo \
+                cliffs-audio-rcm.dtbo \
+                cliffs7-audio-rcm.dtbo \
+                cliffs-audio-mtp-wcd9395.dtbo \
+                cliffs7-audio-mtp-wcd9395.dtbo \
+                cliffs-audio-atp.dtbo \
+                cliffs7-audio-atp.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_PITTI), y)
